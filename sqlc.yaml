@@ -2,7 +2,9 @@ version: "2"
 sql:
   - engine: "postgresql"
     queries: "queries/users.sql"
-    schema: "schema/001_users.sql"
+    schema: 
+      - "schema/001_users.sql"
+      - "schema/002_users_apikey.sql"
     gen:
       go:
         out: "internal/database"
