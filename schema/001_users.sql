@@ -7,6 +7,6 @@ create table users (
   name TEXT NOT NULL
 );
 
--- +goose down
+-- +goose Down
 
 DROP TABLE users;
