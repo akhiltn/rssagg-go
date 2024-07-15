@@ -106,7 +106,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"feed_id\": \"332f54cf-88ea-457d-9e45-9ab43eb7a5d2\"\r\n}",
+					"raw": "{\r\n    \"feed_id\": \"5ff358f6-50c4-4b98-8337-5831ad174d49\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -262,6 +262,43 @@
 					"path": [
 						"v1",
 						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getposts",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "ApiKey e3afcab4717f642f8de73d3bdf242a995d121bd67d38a72ffb04531e799a302a",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/v1/posts",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"posts"
 					]
 				}
 			},
