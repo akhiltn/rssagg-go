@@ -46,6 +46,40 @@
 					}
 				},
 				"url": {
+					"raw": "localhost:8080/v1/user",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addfeeds",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "ApiKey e3afcab4717f642f8de73d3bdf242a995d121bd67d38a72ffb04531e799a302a",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Example Blog\",\r\n    \"url\": \"https://example.com/index.html\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
 					"raw": "localhost:8080/v1/feeds",
 					"host": [
 						"localhost"
@@ -60,13 +94,19 @@
 			"response": []
 		},
 		{
-			"name": "addfeeds",
+			"name": "postfeedfollows",
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "ApiKey e3afcab4717f642f8de73d3bdf242a995d121bd67d38a72ffb04531e799a302a",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"Joe\"\r\n}",
+					"raw": "{\r\n    \"feed_id\": \"332f54cf-88ea-457d-9e45-9ab43eb7a5d2\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -74,14 +114,45 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8080/v1/users",
+					"raw": "localhost:8080/v1/feeds_follows",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
 						"v1",
-						"users"
+						"feeds_follows"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getfeeds",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Garbage Blog\",\r\n    \"url\": \"https://garbage.com/index.html\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/v1/feeds",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"feeds"
 					]
 				}
 			},
@@ -98,8 +169,7 @@
 					{
 						"key": "Authorization",
 						"value": "ApiKey 2ab6e00a5e5b51e210aea63d6b2bb5c956221a18cd2465b455726789c8adc9fe",
-						"type": "text",
-						"disabled": true
+						"type": "text"
 					}
 				],
 				"body": {
