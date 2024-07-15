@@ -5,6 +5,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"time"
 
 	"github.com/akhiltn/rssagg-go/internal/database"
 	"github.com/go-chi/chi"
@@ -40,10 +41,12 @@ func main() {
 		log.Fatal("Can't connect to database", err)
 	}
 
-	apiCfg := ApiConfig{
-		DB: database.New(conn),
-	}
+	db := database.New(conn)
 
+	apiCfg := ApiConfig{
+		DB: db,
+	}
+	go startScrapper(db, 10, time.Minute)
 	router := chi.NewRouter()
 	router.Use(cors.Handler(cors.Options{
 		// AllowedOrigins:   []string{"https://foo.com"}, // Use this to allow specific origin hosts
