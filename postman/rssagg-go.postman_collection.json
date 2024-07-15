@@ -128,6 +128,78 @@
 			"response": []
 		},
 		{
+			"name": "getfeedfollows",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "ApiKey e3afcab4717f642f8de73d3bdf242a995d121bd67d38a72ffb04531e799a302a",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"feed_id\": \"332f54cf-88ea-457d-9e45-9ab43eb7a5d2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/v1/feeds_follows",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"feeds_follows"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deletefeedfollows",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "ApiKey e3afcab4717f642f8de73d3bdf242a995d121bd67d38a72ffb04531e799a302a",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/v1/feeds_follows/486e01cb-d578-4d2b-b69d-9a8188631b65",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"feeds_follows",
+						"486e01cb-d578-4d2b-b69d-9a8188631b65"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "getfeeds",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
@@ -168,7 +240,7 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "ApiKey 2ab6e00a5e5b51e210aea63d6b2bb5c956221a18cd2465b455726789c8adc9fe",
+						"value": "ApiKey e3afcab4717f642f8de73d3bdf242a995d121bd67d38a72ffb04531e799a302a",
 						"type": "text"
 					}
 				],
